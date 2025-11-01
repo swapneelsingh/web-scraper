@@ -1,0 +1,50 @@
+{
+  "name": "jira-llm-scraper",
+  "version": "1.0.0",
+  "description": "Production-grade Apache Jira scraper for LLM training data",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "monitor": "ts-node scripts/monitor.ts",
+    "clean": "rm -rf dist output/*.jsonl checkpoints/*.json",
+    "test": "jest",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "docker:build": "docker build -t jira-scraper .",
+    "docker:run": "docker run --rm -v $(pwd)/output:/app/output -v $(pwd)/checkpoints:/app/checkpoints jira-scraper"
+  },
+  "keywords": [
+    "jira",
+    "scraper",
+    "llm",
+    "web-scraping"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@types/bull": "^4.10.0",
+    "axios": "^1.6.2",
+    "axios-retry": "^4.0.0",
+    "bull": "^4.16.5",
+    "dotenv": "^16.3.1",
+    "p-limit": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.10.5",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "axios-mock-adapter": "^2.1.0",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.1.1",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

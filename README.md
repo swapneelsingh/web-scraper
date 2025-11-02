@@ -126,6 +126,9 @@ Processed 100/15420 issues for HADOOP
 ✓ Fetched 100 issues from HADOOP (offset: 100)
 Processed 200/15420 issues for HADOOP
 ```
+### Step 2: RESULTS
+<img width="458" height="415" alt="image" src="https://github.com/user-attachments/assets/738feb94-b0c5-4747-b2e0-9a7b6d714a5e" />
+
 
 ### Step 2: Check Output Files
 

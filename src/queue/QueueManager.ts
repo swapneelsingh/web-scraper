@@ -1,7 +1,3 @@
-// src/queue/QueueManager.ts
-// BONUS: Advanced implementation with Bull queue for distributed scraping
-// Uncomment in package.json: "bull": "^4.12.0", "@types/bull": "^4.10.0"
-
 import Queue, { Job, JobOptions } from 'bull';
 import { EventEmitter } from 'events';
 
@@ -133,27 +129,3 @@ export class QueueManager extends EventEmitter {
     return this.queue;
   }
 }
-
-// Example usage in JiraScraper:
-/*
-import { QueueManager } from './queue/QueueManager';
-
-const queueManager = new QueueManager();
-
-// Add jobs
-for (let i = 0; i < totalIssues; i += maxResults) {
-  await queueManager.addJob({
-    project: 'KAFKA',
-    startAt: i,
-    maxResults: 100,
-  });
-}
-
-// Process jobs
-queueManager.process(async (job) => {
-  const { project, startAt, maxResults } = job.data;
-  const issues = await this.fetchIssues(project, startAt, maxResults);
-  await this.processAndSaveIssues(issues);
-  await job.progress(100);
-});
-*/

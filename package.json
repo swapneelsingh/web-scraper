@@ -1,5 +1,5 @@
 {
-  "name": "jira-llm-scraper",
+  "name": "web-scraper",
   "version": "1.0.0",
   "description": "Production-grade Apache Jira scraper for LLM training data",
   "main": "dist/index.js",
@@ -21,7 +21,7 @@
     "llm",
     "web-scraping"
   ],
-  "author": "Your Name",
+  "author": "Swapneel Singh",
   "license": "MIT",
   "dependencies": {
     "@types/bull": "^4.10.0",

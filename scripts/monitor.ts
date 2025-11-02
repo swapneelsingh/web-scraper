@@ -1,6 +1,3 @@
-// scripts/monitor.ts
-// Real-time monitoring script for scraper progress
-
 import { readFile } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';

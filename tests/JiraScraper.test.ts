@@ -1,4 +1,3 @@
-// tests/JiraScraper.test.ts
 import { JiraScraper } from '../src/scraper/JiraScraper';
 import { existsSync } from 'fs';
 import { rm } from 'fs/promises';

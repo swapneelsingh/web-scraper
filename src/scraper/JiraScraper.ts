@@ -1,4 +1,3 @@
-// src/scraper/JiraScraper.ts
 import axios, { AxiosInstance, AxiosError } from 'axios';
 import axiosRetry from 'axios-retry';
 import pLimit from 'p-limit';
